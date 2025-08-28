@@ -24,4 +24,13 @@ public class Recursion {
             return fibonacci(n - 1) + fibonacci(n - 2);
         }
     }
+
+    // Función que suma los dígitos de un número entero positivo
+    public static int sumaDigitos(int n) {
+        if (n < 10) {
+            return n; // caso base: un solo dígito
+        } else {
+            return (n % 10) + sumaDigitos(n / 10); // recursión sobre el número dividido por 10
+        }
+    }
 }
