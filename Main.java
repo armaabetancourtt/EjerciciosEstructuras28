@@ -19,10 +19,11 @@ public class Main {
             System.out.println("2. Calcular Fibonacci");
             System.out.println("3. Sumar los dígitos de un número");
             System.out.println("4. Invertir una cadena de texto");
+            System.out.println("5. Contar vocales en una cadena");
             System.out.println("0. Salir");
             System.out.print("Elige una opción: ");
             opcion = sc.nextInt();
-            sc.nextLine();
+            sc.nextLine(); // limpiar buffer
 
             switch (opcion) {
                 case 1:
@@ -48,6 +49,11 @@ public class Main {
                     System.out.print("Ingresa una cadena de texto: ");
                     String texto = sc.nextLine();
                     System.out.println("Cadena invertida: " + Recursion.invertirCadena(texto));
+                    break;
+                case 5:
+                    System.out.print("Ingresa una cadena de texto: ");
+                    String cadenaVocales = sc.nextLine();
+                    System.out.println("Número de vocales en la cadena: " + Recursion.contarVocales(cadenaVocales));
                     break;
                 case 0:
                     System.out.println("Saliendo del programa...");
