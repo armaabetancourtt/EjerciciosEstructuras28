@@ -39,7 +39,19 @@ public class Recursion {
         if (texto.isEmpty() || texto.length() == 1) {
             return texto; 
         } else {
+            // última letra + recursión sobre el resto
             return texto.charAt(texto.length() - 1) + invertirCadena(texto.substring(0, texto.length() - 1));
+        }
+    }
+
+    // Función que cuenta las vocales en una cadena usando recursión
+    public static int contarVocales(String texto) {
+        if (texto.isEmpty()) {
+            return 0; 
+        } else {
+            char c = Character.toLowerCase(texto.charAt(0));
+            int cuenta = (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') ? 1 : 0;
+            return cuenta + contarVocales(texto.substring(1)); 
         }
     }
 }
