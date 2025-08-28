@@ -18,9 +18,11 @@ public class Main {
             System.out.println("1. Calcular Factorial");
             System.out.println("2. Calcular Fibonacci");
             System.out.println("3. Sumar los dígitos de un número");
+            System.out.println("4. Invertir una cadena de texto");
             System.out.println("0. Salir");
             System.out.print("Elige una opción: ");
             opcion = sc.nextInt();
+            sc.nextLine();
 
             switch (opcion) {
                 case 1:
@@ -41,6 +43,11 @@ public class Main {
                     } else {
                         System.out.println("Suma de los dígitos de " + numSum + " = " + Recursion.sumaDigitos(numSum));
                     }
+                    break;
+                case 4:
+                    System.out.print("Ingresa una cadena de texto: ");
+                    String texto = sc.nextLine();
+                    System.out.println("Cadena invertida: " + Recursion.invertirCadena(texto));
                     break;
                 case 0:
                     System.out.println("Saliendo del programa...");
