@@ -17,6 +17,7 @@ public class Main {
             System.out.println("\n -------- [ MENÚ DE RECURSIÓN ] -------");
             System.out.println("1. Calcular Factorial");
             System.out.println("2. Calcular Fibonacci");
+            System.out.println("3. Sumar los dígitos de un número");
             System.out.println("0. Salir");
             System.out.print("Elige una opción: ");
             opcion = sc.nextInt();
@@ -31,6 +32,15 @@ public class Main {
                     System.out.print("Ingresa la posición para Fibonacci: ");
                     int numFib = sc.nextInt();
                     System.out.println("Fibonacci en posición " + numFib + " = " + Recursion.fibonacci(numFib));
+                    break;
+                case 3:
+                    System.out.print("Ingresa un número entero positivo: ");
+                    int numSum = sc.nextInt();
+                    if (numSum < 0) {
+                        System.out.println("Número inválido. Debe ser positivo.");
+                    } else {
+                        System.out.println("Suma de los dígitos de " + numSum + " = " + Recursion.sumaDigitos(numSum));
+                    }
                     break;
                 case 0:
                     System.out.println("Saliendo del programa...");
