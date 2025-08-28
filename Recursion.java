@@ -28,9 +28,18 @@ public class Recursion {
     // Función que suma los dígitos de un número entero positivo
     public static int sumaDigitos(int n) {
         if (n < 10) {
-            return n; // caso base: un solo dígito
+            return n; 
         } else {
-            return (n % 10) + sumaDigitos(n / 10); // recursión sobre el número dividido por 10
+            return (n % 10) + sumaDigitos(n / 10); 
+        }
+    }
+
+    // Función que invierte una cadena de texto usando recursión
+    public static String invertirCadena(String texto) {
+        if (texto.isEmpty() || texto.length() == 1) {
+            return texto; 
+        } else {
+            return texto.charAt(texto.length() - 1) + invertirCadena(texto.substring(0, texto.length() - 1));
         }
     }
 }
